@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trackle</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f8f8;
+        opacity: 0;
+        animation: fadeIn 1s forwards; /* Add fade-in animation */
+      }
+
+      /* Animation to make the page fade in */
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .logo {
+        display: block;
+        margin: 20px auto;
+        width: 90px;
+        transition: transform 0.3s ease; /* Smooth hover effect */
+      }
+
+      .logo:hover {
+        transform: scale(1.1); /* Slightly increase logo size on hover */
+      }
+
+      .line {
+        position: absolute;
+        top: 50px;
+        bottom: 105px;
+        left: 47.25px;
+        width: 6px;
+        background-color: #0009ab;
+        z-index: 0;
+        transition: all 0.3s ease; /* Smooth transition for line */
+      }
+
+      .station {
+        display: flex;
+        align-items: center;
+        margin-bottom: 45px;
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 0.5s; /* Delay fade-in for each station */
+      }
+
+      .station::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        border: 6px solid black;
+        border-radius: 50%;
+        background-color: white;
+        position: absolute;
+        left: 51px;
+        transform: translateX(-50%);
+        z-index: 1;
+        transition: transform 0.3s ease;
+      }
+
+      .station a {
+        text-decoration: none;
+        color: darkblue;
+        font-weight: 500;
+        font-size: 1.5em;
+        margin-left: 90px;
+        transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+      }
+
+      .station a:hover {
+        text-decoration: underline;
+        color: #0009ab; /* Change color on hover */
+        transform: translateX(5px); /* Slightly move the link */
+      }
+
+      .stations-container {
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1s; /* Delay fade-in for the whole container */
+        padding-bottom: 60px; /* Make space for the footer */
+      }
+
+      footer {
+        width: 100%;
+        background-color: #0009ab; /* Quinacridone magenta */
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1em;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        animation-delay: 1.5s; /* Delay fade-in for the footer */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        body {
+          font-size: 1.2em;
+        }
+
+        .station a {
+          font-size: 1.2em;
+        }
+      }
+      /* Sticky logo styling */
+      .sticky-logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 60px; /* Default logo size */
+        transition: transform 0.3s ease, width 0.3s ease; /* Smooth transitions for scaling and enlarging */
+        z-index: 100; /* Ensure it stays on top */
+      }
+
+      .sticky-logo:hover {
+        transform: scale(1.2) translateX(5px); /* Slightly enlarge and move to the right */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stations-container">
+      <div class="line"></div>
+      <div class="station">
+        <a href="/"
+          ><img
+            src="https://cdn.freebiesupply.com/logos/large/2x/transport-for-london-1-logo-png-transparent.png"
+            alt="Trackle Logo"
+            class="logo"
+        /></a>
+      </div>
+      <div class="station">
+        <a href="https://trackle.pages.dev/map.html">The Tube Map</a>
+      </div>
+      <div class="station">
+        <a href="https://trackle.pages.dev/tube.html">London Underground</a>
+      </div>
+      <div class="station">
+        <a href="https://trackle.pages.dev/dlr.html"
+          >DLR, Cable Car &amp; Elizabeth Line</a
+        >
+      </div>
+      <div class="station">
+        <a href="https://trackle.pages.dev/overground.html"
+          >London Overground</a
+        >
+      </div>
+      <div class="station">
+        <a href="https://trackle.pages.dev/trams.html">London Trams</a>
+      </div>
+    </div>
+    <footer>
+      <a
+        href="/"
+        style="
+          color: white;
+          text-decoration: underline;
+          text-decoration-color: white;
+        "
+        >Return to Home</a
+      ><br>
+      <br />&copy; 2024
+      <a
+        href="https://sbdesigns.pages.dev"
+        style="
+          color: white;
+          text-decoration: underline;
+          text-decoration-color: white;
+        "
+        >SB Designs</a
+      >
+    </footer>
+  </body>
+</html>
