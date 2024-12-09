@@ -19,10 +19,16 @@ body {
     }
   }
 
-  .logo {
+  .prilogo {
     display: block;
     margin: 20px auto;
     width: 90px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+  .logo {
+    display: block;
+    margin: 20px auto;
+    width: 350px;
     transition: transform 0.3s ease; /* Smooth hover effect */
   }
 
@@ -108,4 +114,9 @@ body {
 
   .sticky-logo:hover {
     transform: scale(1.2) translateX(5px); /* Slightly enlarge and move to the right */
+  }
+  .subline{
+    font-size:0.7em;
+    text-decoration: none;
+    color: #353535;
   }

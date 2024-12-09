@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Trackle Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="shared.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/3.3.0/jquery.rss.min.js"></script>
+  <script>
+    jQuery(function($) {
+      $("#feeds").rss("https://trackle-blog.blogspot.com/feeds/posts/default?alt=rss",
+      {
+        layoutTemplate:'{entries}',
+        entryTemplate:'<div class="station"><a href="{url}">{title}<div class="subline">{cat} | {date}</div></a></div>',
+        tokens: {
+            cat: function(entry, tokens) {
+                return entry["categories"][0]["name"];
+            }
+        }
+      })
+    })
+  </script>
+  <style>
+    .line {
+      position: absolute;
+      top: 50px;
+      bottom: 105px;
+      left: 47.25px;
+      width: 6px;
+      background-color: #9A114F;
+      z-index: 0;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1.5s; /* Delay for line */
+    }
+    .station a:hover {
+      text-decoration: underline;
+      color: #9A114F; /* Change color on hover */
+      transform: translateX(5px); /* Slightly move the link */
+    }
+    footer {
+      background-color: #8E0152; /* Quinacridone magenta */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stations-container" id="feeds">
+    <div class="line"></div>
+    <div class="station">
+        <a href="#" class="logo" style="font-size:2.5em;"
+          >The Trackle Blog</a>
+      </div>
+  </div>
+  <footer>
+    <a href="/" style=" color: white; text-decoration: underline; text-decoration-color: white;">Return to Home</a></br>
+    &copy; 2024
+      <a
+        href="https://sbdesigns.pages.dev"
+        style="
+          color: white;
+          text-decoration: underline;
+          text-decoration-color: white;
+        "
+        >SB Designs</a
+      >
+    </footer>
+</body>
+</html>
