@@ -13,6 +13,7 @@
     jQuery(function($) {
       $("#feeds").rss("https://trackle-blog.blogspot.com/feeds/posts/default?alt=rss",
       {
+        ssl: true,
         layoutTemplate:'{entries}',
         entryTemplate:'<div class="station"><a href="{url}">{title}<div class="subline">{cat} | {date}</div></a></div>',
         tokens: {
