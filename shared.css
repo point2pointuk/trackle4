@@ -1,122 +1,122 @@
 body {
-    font-family: "DM Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f8f8;
-    opacity: 0;
-    animation: fadeIn 1s forwards; /* Add fade-in animation */
-  }
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards; /* Add fade-in animation */
+}
 
-  /* Animation to make the page fade in */
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+/* Animation to make the page fade in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
+}
 
-  .prilogo {
-    display: block;
-    margin: 20px auto;
-    width: 90px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
-  }
-  .logo {
-    display: block;
-    margin: 20px auto;
-    width: 350px;
-    transition: transform 0.3s ease; /* Smooth hover effect */
-  }
+.prilogo {
+  display: block;
+  margin: 20px auto;
+  width: 90px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 350px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
 
-  .logo:hover {
-    transform: scale(1.1); /* Slightly increase logo size on hover */
-  }
+.logo:hover {
+  transform: scale(1.1); /* Slightly increase logo size on hover */
+}
 
-  .station {
-    display: flex;
-    align-items: center;
-    margin-bottom: 45px;
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 0.5s; /* Delay fade-in for each station */
-  }
+.station {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s; /* Delay fade-in for each station */
+}
 
-  .station::before {
-    content: "";
-    width: 24px;
-    height: 24px;
-    border: 6px solid black;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    left: 51px;
-    transform: translateX(-50%);
-    z-index: 1;
-    transition: transform 0.3s ease;
+.station::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 6px solid black;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: 51px;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.station a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-left: 90px;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.stations-container {
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s; /* Delay fade-in for the whole container */
+  padding-bottom: 60px; /* Make space for the footer */
+}
+
+footer {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1em;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s; /* Delay fade-in for the footer */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2em;
   }
 
   .station a {
-    text-decoration: none;
-    color: darkblue;
-    font-weight: 500;
-    font-size: 1.5em;
-    margin-left: 90px;
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    font-size: 1.2em;
   }
+}
+/* Sticky logo styling */
+.sticky-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 60px; /* Default logo size */
+  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transitions for scaling and enlarging */
+  z-index: 100; /* Ensure it stays on top */
+}
 
-  .stations-container {
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s; /* Delay fade-in for the whole container */
-    padding-bottom: 60px; /* Make space for the footer */
-  }
-
-  footer {
-    width: 100%;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1em;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1.5s; /* Delay fade-in for the footer */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-  }
-
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    body {
-      font-size: 1.2em;
-    }
-
-    .station a {
-      font-size: 1.2em;
-    }
-  }
-  /* Sticky logo styling */
-  .sticky-logo {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 60px; /* Default logo size */
-    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transitions for scaling and enlarging */
-    z-index: 100; /* Ensure it stays on top */
-  }
-
-  .sticky-logo:hover {
-    transform: scale(1.2) translateX(5px); /* Slightly enlarge and move to the right */
-  }
-  .subline{
-    font-size:0.7em;
-    text-decoration: none;
-    color: #353535;
-  }
+.sticky-logo:hover {
+  transform: scale(1.2) translateX(5px); /* Slightly enlarge and move to the right */
+}
+.subline{
+  font-size:0.7em;
+  text-decoration: none;
+  color: #353535;
+}

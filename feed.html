@@ -12,17 +12,24 @@
   <script>
     jQuery(function($) {
       $("#feeds").rss("https://trackle-blog.blogspot.com/feeds/posts/default?alt=rss",
-      {
-        limit: 10,
-        ssl: true,
-        layoutTemplate:'{entries}',
-        entryTemplate:'<div class="station"><a href="{url}">{title}<div class="subline">{cat} | {date}</div></a></div>',
-        tokens: {
+        {
+          limit: 10,
+          ssl: true,
+          layoutTemplate:'{entries}',
+          entryTemplate:'<div class="station"><a href="{url}">{title}<div class="subline">{cat} | {date}</div></a></div>',
+          tokens: {
             cat: function(entry, tokens) {
-                return entry["categories"][0]["name"];
+              return entry["categories"][0]["name"];
             }
+          },
+          success: function() {
+            blogLinkback = document.createElement("div");
+            blogLinkback.classList.add('station');
+            blogLinkback.innerHTML = '<a href="https://trackle-blog.blogspot.com/">View More Posts<div class="subline">The Trackle Blog</div></a>'
+            $("#feeds").append(blogLinkback);
+          },
         }
-      })
+      );
     })
   </script>
   <style>
