@@ -4,16 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trackle</title>
-  <link rel="icon" type="image/x-icon" href="https://trackle.pages.dev/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Preload critical assets -->
-  <link rel="preload" href="https://trackle.pages.dev/logo.png" as="image">
-  <link rel="preload" href="https://cdn.glitch.global/970d7114-6062-43bb-8f27-670f6baca3e8/imagead?v=1733675658877" as="image">
-
-  <!-- Prefetch links to other pages -->
-  <link rel="prefetch" href="/tfl.html">
-  <link rel="prefetch" href="/national-rail.html">
-  <link rel="prefetch" href="https://trackle.gitbook.io/trackle">
   <style>
     body {
       font-family: 'DM Sans', sans-serif;
@@ -25,8 +16,15 @@
       align-items: center;
       min-height: 100vh;
       background-color: #f8f8f8;
-      opacity: 1;
-      transition: opacity 0.3s ease-in-out; /* Instant fade-in */
+      opacity: 0;
+      animation: fadeIn 2s forwards; /* Apply fade-in animation to the whole body */
+    }
+
+    /* Animation to make the page fade in */
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     /* Sticky logo styling */
@@ -35,23 +33,29 @@
       top: 20px;
       left: 20px;
       width: 60px; /* Default logo size */
-      transition: transform 0.3s ease, width 0.3s ease;
-      z-index: 100;
+      transition: transform 0.3s ease, width 0.3s ease; /* Smooth transitions for scaling and enlarging */
+      z-index: 100; /* Ensure it stays on top */
+      opacity: 0;
+      animation: fadeIn 2s forwards; /* Fade-in animation */
+      animation-delay: 1s; /* Delay for sticky logo */
     }
 
     .sticky-logo:hover {
-      transform: scale(1.2) translateX(5px);
+      transform: scale(1.2) translateX(5px); /* Slightly enlarge and move to the right */
     }
 
     .logo {
       display: block;
       margin: 20px auto;
       width: 90px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease; /* Smooth hover effect */
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1.5s; /* Delay for logo */
     }
 
     .logo:hover {
-      transform: scale(1.1);
+      transform: scale(1.1); /* Slightly increase logo size on hover */
     }
 
     .line {
@@ -62,6 +66,9 @@
       width: 6px;
       background-color: #9A114F;
       z-index: 0;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 1.5s; /* Delay for line */
     }
 
     .station {
@@ -69,6 +76,9 @@
       align-items: center;
       margin-bottom: 45px;
       position: relative;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 2s; /* Delay fade-in for each station */
     }
 
     .station::before {
@@ -91,36 +101,64 @@
       font-weight: 500;
       font-size: 1.5em;
       margin-left: 90px;
-      transition: color 0.3s ease, transform 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
     }
 
     .station a:hover {
       text-decoration: underline;
-      color: #9A114F;
-      transform: translateX(5px);
+      color: #9A114F; /* Change color on hover */
+      transform: translateX(5px); /* Slightly move the link */
+    }
+
+    .stations-container {
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 2.5s; /* Delay fade-in for the whole container */
+      padding-bottom: 60px; /* Make space for the sticky footer */
     }
 
     footer {
       width: 100%;
-      background-color: #8E0152;
+      background-color: #8E0152; /* Quinacridone magenta */
       color: white;
       text-align: center;
       padding: 10px 0;
       font-size: 1em;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 3s; /* Delay fade-in for the footer */
       position: fixed;
       bottom: 0;
       left: 0;
       z-index: 10;
     }
 
-    .footer-img {
-      max-height: 300px;
-      width: 100%;
-      object-fit: contain;
-      padding: 0 20px;
-      box-sizing: border-box;
+    /* Paragraph styling for text wrapping */
+    p {
+      width: 80%;  /* Adjust width for better wrapping */
+      max-width: 800px;  /* Limit the maximum width */
+      margin: 20px auto;  /* Center align the paragraph */
+      line-height: 1.6;  /* Improve readability with line spacing */
+      text-align: center;  /* Center the text */
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 2s; /* Delay fade-in for the paragraph */
     }
 
+    /* Image at the bottom styling */
+    .footer-img {
+      max-height: 300px; /* Set the maximum height of the image */
+      width: 100%;  /* Make the image fill the available width */
+      object-fit: contain;  /* Ensure the image maintains its aspect ratio */
+      padding: 0 20px;  /* Add padding to the left and right */
+      box-sizing: border-box;  /* Ensure padding is included in the width calculation */
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: 2.5s; /* Delay fade-in for the image */
+    }
+
+    /* Mobile responsiveness */
     @media (max-width: 768px) {
       body {
         font-size: 1.2em;
@@ -130,19 +168,19 @@
         font-size: 1.2em;
       }
 
+      p {
+        width: 90%;  /* Adjust width for smaller screens */
+      }
+
       .footer-img {
-        padding: 0 10px;
+        padding: 0 10px;  /* Reduce padding on smaller screens */
       }
     }
+
   </style>
-  <script>
-    // Add fade-out effect when leaving the page
-    window.addEventListener('beforeunload', function () {
-      document.body.style.opacity = '0';
-    });
-  </script>
 </head>
 <body>
+
   <div class="stations-container">
     <div class="line"></div>
     <div class="station">
@@ -174,6 +212,6 @@
         "
         >SB Designs</a
       >
-  </footer>
+    </footer>
 </body>
 </html>
