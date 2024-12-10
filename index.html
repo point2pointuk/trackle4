@@ -31,6 +31,18 @@
          footer {
          background-color: #8E0152; /* Quinacridone magenta */
          }
+         .footer-img {
+         width: 100%; /* Make the image take up the full width of its container */
+         height: auto; /* Maintain the aspect ratio */
+         max-width: 600px; /* Optional: Limit the maximum width to prevent it from being too large on large screens */
+         display: block; /* Ensure it behaves like a block element */
+         margin: 0 auto; /* Center the image horizontally */
+         }
+         @media (max-width: 768px) {
+         .footer-img {
+         max-width: 90%; /* Adjust max-width for smaller screens */
+         }
+         }
       </style>
    </head>
    <body>
@@ -57,9 +69,9 @@
       <footer>
          &copy; 2024
          <a href="https://sbdesigns.pages.dev" style=" color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
-          | 
+         | 
          <a href="/credits.html" style=" color: white; text-decoration: underline; text-decoration-color: white;">Credits</a>
-          | 
+         | 
          <a href="https://trackle-status.betteruptime.com" style=" color: white; text-decoration: underline; text-decoration-color: white;">Status</a>
       </footer>
    </body>
