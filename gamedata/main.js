@@ -46,8 +46,8 @@ class App {
 
     // Set the map style URL based on the theme
     const mapStyle = darkMode
-      ? "https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=0d302bbdc3d84bedb7b4fa2327463704"
-      : "https://tile.thunderforest.com/atlas/{z}/{x}/{y}.png?apikey=0d302bbdc3d84bedb7b4fa2327463704";
+      ? "https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2FpbGFuIiwiYSI6ImNreHh6MjNtNzJhd3oyb21wYjRkY2U0aGsifQ.tZzQ-GAom5_D8SLwrqmy-Q"
+      : "https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoia2FpbGFuIiwiYSI6ImNreHh6MjNtNzJhd3oyb21wYjRkY2U0aGsifQ.tZzQ-GAom5_D8SLwrqmy-Q";
 
     // Remove the existing tile layer if it exists
     if (tiles) {
