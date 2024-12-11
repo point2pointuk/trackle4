@@ -1,9 +1,9 @@
 :root {
     --color-bg: rgb(12, 12, 12);
     --color-text-main: #ffffff;
-    --color-primary: #ffff00;
+    --color-primary: #00003C;
     --wrapper-height: 87vh;
-    --color-overlay: #ffffff;
+    --color-overlay: #333333;
     --image-max-width: 300px;
     --image-margin: 3rem;
     --font-family: "DM Sans", sans-serif; /* Updated font family */
