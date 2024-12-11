@@ -7,7 +7,7 @@ body {
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  background: url(/tile.png), linear-gradient(150deg, rgb(248, 248, 248) 0%, #e1e1e1 100%);
+  background: url(/assets/tile.png), linear-gradient(150deg, rgb(248, 248, 248) 0%, #e1e1e1 100%);
   opacity: 0;
   animation: fadeIn 0.5s forwards; /* Add fade-in animation */
 }
