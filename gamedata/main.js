@@ -7,9 +7,13 @@ class App {
     this.placeList = []; // Initialize an empty list to store place data
   }
 
-  initialize() {
-
+initialize() {
     this.initializePlaces(); // Load the list of places
+
+    // Set the total number of places (initialize in localStorage if not already)
+    if (!localStorage.getItem('totalPlaces')) {
+        localStorage.setItem('totalPlaces', this.placeList.length); // Set total number of places
+    }
 
     console.log("create the map");
 
@@ -30,15 +34,10 @@ class App {
       }
     });
 
-    // Add an event listener to the input field to handle guesses on "Enter" key press
-    document.getElementById("guess").addEventListener("keyup", (event) => {
-      if (event.key === "Enter") {
-        app.enterGuess(); // Call the method to process the guess
-      }
-    });
-
+    // Display score immediately
     this.displayScore(); // Display the current score and total places
-  }
+}
+
 
   setMapTheme() {
     // Check if the system is in dark mode
