@@ -1,6 +1,6 @@
 :root {
     --color-bg: rgb(12, 12, 12);
-    --color-text-main: #000000;
+    --color-text-main: #ffffff;
     --color-primary: #ffff00;
     --wrapper-height: 87vh;
     --color-overlay: #ffffff;
@@ -10,14 +10,6 @@
     --font-family-header: "DM Sans", sans-serif; /* Updated font family */
   }
   
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --color-bg: #BD4B00;
-      --color-primary: #ffd700;
-      --color-overlay: #333333;
-      --color-text-main: #ffffff;
-    }
-  }
   
   * {
     box-sizing: border-box;
