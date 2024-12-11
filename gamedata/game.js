@@ -95,13 +95,13 @@ function enterGuess() {
     }
   };
   
-  App.prototype.displayScore = function () {
+App.prototype.displayScore = function () {
     var score = Object.keys(
-      JSON.parse(window.localStorage.getItem("places-overground") || "{}")
-    ).length; // Count the number of found places.
-  
-    document.getElementById("score").innerHTML = score; // Update the score display.
-    document.getElementById("total").innerHTML = this.placeList.length; // Display the total number of places.
+        JSON.parse(window.localStorage.getItem("places-overground") || "{}")
+    ).length; // Count the number of found places
+
+    document.getElementById("score").innerHTML = score; // Update the score display
+    document.getElementById("total").innerHTML = this.placeList.length; // Display the total number of places
   
     const shareText = `I just played Trackle™ and named ${score} London Underground stations! You can play Trackle™ too:`; // Text for sharing the game.
   
@@ -168,14 +168,11 @@ function enterGuess() {
     return res; // Return the computed distance.
   }
   
-  App.prototype.resetGame = function () {
-    // Reset the game state.
-  
-    window.localStorage.removeItem("places-overground"); // Clear local storage.
-  
-    document.getElementById("score").innerHTML = 0; // Reset the score display.
-    document.getElementById("total").innerHTML = this.placeList.length; // Reset the total display.
-    location.reload(); // Reload the page to restart.
+App.prototype.resetGame = function () {
+    window.localStorage.removeItem("places-overground"); // Clear local storage
+    document.getElementById("score").innerHTML = 0; // Reset the score display
+    document.getElementById("total").innerHTML = this.placeList.length; // Reset the total display
+    location.reload(); // Reload the page to restart
   
     this.placeList.forEach((place) => {
       if (place.overlay) {
