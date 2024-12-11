@@ -8,31 +8,27 @@ class App {
   }
 
   initialize() {
+
     this.initializePlaces(); // Load the list of places
+
     console.log("create the map");
 
+    // Create a Leaflet map, centered on London, without a zoom control
     map = L.map("map", { zoomControl: false }).setView([51.508328, -0.124819], 13);
     this.setMapTheme(); // Apply the correct map theme based on system preferences
 
-    // Initialize the total score
-    document.getElementById("total").innerHTML = this.placeList.length;
+    // Update the map theme whenever the user's system theme changes
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+      this.setMapTheme();
+    });
 
     let foundPlaces = JSON.parse(window.localStorage.getItem("places-overground") || "{}");
+    // Iterate over all places and show overlays for previously found ones
     this.placeList.forEach((place) => {
-        if (foundPlaces[place.name]) {
-            place.showOverlay();
-        }
+      if (foundPlaces[place.name]) {
+        place.showOverlay();
+      }
     });
-
-    // Update the score when the game starts or after a reload
-    this.displayScore();
-
-    document.getElementById("guess").addEventListener("keyup", (event) => {
-        if (event.key === "Enter") {
-            app.enterGuess(); // Call the method to process the guess
-        }
-    });
-};
 
     // Add an event listener to the input field to handle guesses on "Enter" key press
     document.getElementById("guess").addEventListener("keyup", (event) => {
