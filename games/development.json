@@ -3,9 +3,7 @@
 	"line_id": "devvic",
 	"main_colour": "#CC0000",
 	"darker_colour": "#190000",
-    "bg_colour": "#120000",
-	"rail_icon": "assets/rail/nationalrail.png",
-	"marker_icon": "assets/markers/default.png",
+    	"bg_colour": "#120000",
 	"author": "Trackle Devs",
 	"station_names": [
         {"name": "KINGS CROSS","pt":[51.53207,-0.1266559]},
