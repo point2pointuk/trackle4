@@ -77,13 +77,9 @@
          What is Trackle™? Trackle™ is a game, in which players attempt to guess all the stations in: the London Underground; the DLR, Cable Car and Elizabeth Line; the London Overground; or the London Trams.
       </p>
       <!-- Image at the bottom -->
-      <img src="/assets/banner.png" alt="Trackle Footer Image" class="footer-img"><br><br>
+      <img src="/assets/banner.png" alt="Trackle Footer Image" class="footer-img"><br><br><br>
       <footer>
-         <a href="#"
-        id="shareButton"
-      >
-        🔗 Share Trackle™
-         </a><br>
+         <a href="#" id="shareButton" style=" color: white; text-decoration: underline; text-decoration-color: white;">Share</a><br>
          &copy; 2024
          <a href="https://sbdesigns.pages.dev" style=" color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
          | 
@@ -98,7 +94,7 @@
           try {
             await navigator.share({
               title: "Trackle™",
-              text: "Play Trackle™️ today and attempt to guess all of the stations on the TfL network! Play now at https://trackle.glitch.me!",
+              text: "Play Trackle™ by SB Designs today and attempt to guess all of the stations on TfL and National Rail! Play now and have fun at https://trackle.pages.dev!",
             });
             console.log("Trackle™ shared successfully!");
           } catch (error) {
@@ -106,7 +102,7 @@
           }
         } else {
           alert(
-            "Sharing is not supported on this browser. Try using a mobile device."
+            "Sharing is not supported here."
           );
         }
       });</script>
