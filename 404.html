@@ -21,6 +21,14 @@
       display: flex;
       flex-direction: column;
       background: url(/assets/tile.png), linear-gradient(150deg, rgb(248, 248, 248) 0%, #e1e1e1 100%);
+      opacity: 0;
+      animation: fadeIn 0.5s forwards; /* Add fade-in animation */
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
     }
     img {
       width: 100px;
