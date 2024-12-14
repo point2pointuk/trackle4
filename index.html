@@ -79,6 +79,11 @@
       <!-- Image at the bottom -->
       <img src="/assets/banner.png" alt="Trackle Footer Image" class="footer-img"><br><br>
       <footer>
+         <a href="#"
+        id="shareButton"
+      >
+        🔗 Share Trackle™
+         </a><br>
          &copy; 2024
          <a href="https://sbdesigns.pages.dev" style=" color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
          | 
@@ -86,5 +91,24 @@
          | 
          <a href="https://trackle-status.betteruptime.com" style=" color: white; text-decoration: underline; text-decoration-color: white;">Status</a>
       </footer>
+      <script>     const shareButton = document.getElementById("shareButton");
+
+      shareButton.addEventListener("click", async () => {
+        if (navigator.share) {
+          try {
+            await navigator.share({
+              title: "Trackle™",
+              text: "Play Trackle™️ today and attempt to guess all of the stations on the TfL network! Play now at https://trackle.glitch.me!",
+            });
+            console.log("Trackle™ shared successfully!");
+          } catch (error) {
+            console.error("Error sharing Trackle™:", error);
+          }
+        } else {
+          alert(
+            "Sharing is not supported on this browser. Try using a mobile device."
+          );
+        }
+      });</script>
    </body>
 </html>
