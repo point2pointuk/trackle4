@@ -1,0 +1,45 @@
+{
+  "name": "Trackle",
+  "short_name": "Trackle",
+  "icons": [
+    // iOS Icons
+    { "src": "/images/icons/ios/AppIcon@2x.png", "type": "image/png", "sizes": "60x60" },
+    { "src": "/images/icons/ios/AppIcon@3x.png", "type": "image/png", "sizes": "60x60" },
+    { "src": "/images/icons/ios/AppIcon~ipad.png", "type": "image/png", "sizes": "76x76" },
+    { "src": "/images/icons/ios/AppIcon@2x~ipad.png", "type": "image/png", "sizes": "76x76" },
+    { "src": "/images/icons/ios/AppIcon-83.5@2x~ipad.png", "type": "image/png", "sizes": "83.5x83.5" },
+    { "src": "/images/icons/ios/AppIcon-40@2x.png", "type": "image/png", "sizes": "40x40" },
+    { "src": "/images/icons/ios/AppIcon-40@3x.png", "type": "image/png", "sizes": "40x40" },
+    { "src": "/images/icons/ios/AppIcon-40~ipad.png", "type": "image/png", "sizes": "40x40" },
+    { "src": "/images/icons/ios/AppIcon-40@2x~ipad.png", "type": "image/png", "sizes": "40x40" },
+    { "src": "/images/icons/ios/AppIcon-20@2x.png", "type": "image/png", "sizes": "20x20" },
+    { "src": "/images/icons/ios/AppIcon-20@3x.png", "type": "image/png", "sizes": "20x20" },
+    { "src": "/images/icons/ios/AppIcon-20~ipad.png", "type": "image/png", "sizes": "20x20" },
+    { "src": "/images/icons/ios/AppIcon-20@2x~ipad.png", "type": "image/png", "sizes": "20x20" },
+    { "src": "/images/icons/ios/AppIcon-29.png", "type": "image/png", "sizes": "29x29" },
+    { "src": "/images/icons/ios/AppIcon-29@2x.png", "type": "image/png", "sizes": "29x29" },
+    { "src": "/images/icons/ios/AppIcon-29@3x.png", "type": "image/png", "sizes": "29x29" },
+    { "src": "/images/icons/ios/AppIcon-29~ipad.png", "type": "image/png", "sizes": "29x29" },
+    { "src": "/images/icons/ios/AppIcon-29@2x~ipad.png", "type": "image/png", "sizes": "29x29" },
+
+    // Web Icons
+    { "src": "/images/icons/web/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
+    { "src": "/images/icons/web/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/images/icons/web/icon-512.png", "type": "image/png", "sizes": "512x512" },
+    { "src": "/images/icons/web/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
+    { "src": "/images/icons/web/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" },
+
+    // Android Density-Specific Icons
+    { "src": "/images/icons/android/icon-mdpi.png", "type": "image/png", "sizes": "48x48" },
+    { "src": "/images/icons/android/icon-hdpi.png", "type": "image/png", "sizes": "72x72" },
+    { "src": "/images/icons/android/icon-xhdpi.png", "type": "image/png", "sizes": "96x96" },
+    { "src": "/images/icons/android/icon-xxhdpi.png", "type": "image/png", "sizes": "144x144" },
+    { "src": "/images/icons/android/icon-xxxhdpi.png", "type": "image/png", "sizes": "192x192" },
+
+    // Apple Touch Icon (for iOS home screen)
+    { "src": "/images/icons/web/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
