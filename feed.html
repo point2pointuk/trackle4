@@ -72,13 +72,17 @@
   <footer>
     <a href="/" style=" color: white; text-decoration: underline; text-decoration-color: white;">Return to Home</a></br>
     <a href="javascript:;" id="shareButton" style=" color: white; text-decoration: underline; text-decoration-color: white;">Share</a><br>
-     &copy; 2024
+     &copy; <span id="year"></span>
          <a href="https://sbdesigns.pages.dev" style=" color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
          | 
-         <a href="/credits.html" style=" color: white; text-decoration: underline; text-decoration-color: white;">Credits</a>
-         | 
-         <a href="https://trackle-status.betteruptime.com" style=" color: white; text-decoration: underline; text-decoration-color: white;">Status</a>
-    </footer>
+         <a href="/credits.html" style=" color: white; text-decoration: underline; text-decoration-color: white;">Credits</a><br>
+   <iframe src="https://trackle-status.betteruptime.com/badge?theme=dark" width="250" height="30" frameborder="0" scrolling="no" style="color-scheme: normal"></iframe>
+</footer>
+
+<!-- Place the script right before closing body -->
+<script>
+   document.getElementById("year").textContent = new Date().getFullYear();
+</script>
     <script src="/script.js"></script>
 </body>
 </html>
