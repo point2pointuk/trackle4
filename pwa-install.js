@@ -40,4 +40,3 @@ window.addEventListener('load', () => {
   // Reset the dismissed state after page reload (optional)
   localStorage.removeItem('pwa-install-dismissed');
 });
-
