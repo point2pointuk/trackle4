@@ -81,15 +81,27 @@
       </p>
       <!-- Image at the bottom -->
       <img src="/assets/banner.png" alt="Trackle Footer Image" class="footer-img"><br><br><br>
+
+      <!-- FOOTER -->
       <footer>
-         <a href="javascript:;" id="shareButton" style=" color: white; text-decoration: underline; text-decoration-color: white;">Share</a><br>
-         &copy; 2024
-         <a href="https://sbdesigns.pages.dev" style=" color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
+         <a href="javascript:;" id="shareButton" style="color: white; text-decoration: underline; text-decoration-color: white;">Share</a><br>
+         &copy; <span id="year"></span>
+         <a href="https://sbdesigns.pages.dev" style="color: white; text-decoration: underline; text-decoration-color: white;">SB Designs</a>
          | 
-         <a href="/credits.html" style=" color: white; text-decoration: underline; text-decoration-color: white;">Credits</a>
+         <a href="/credits.html" style="color: white; text-decoration: underline; text-decoration-color: white;">Credits</a>
          | 
-         <a href="https://trackle-status.betteruptime.com" style=" color: white; text-decoration: underline; text-decoration-color: white;">Status</a>
+         <a href="https://trackle-status.betteruptime.com" style="color: white; text-decoration: underline; text-decoration-color: white;">Status</a>
+         | 
+         <a href="javascript:;" id="installButton" style="color: white; text-decoration: underline; text-decoration-color: white;">Install Trackle</a>
       </footer>
+      <!-- Place the script right before closing body -->
+      <script>
+         document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      <script src="/pwa-install.js"></script>
+      <!-- FOOTER END -->
+
+      
       <script src="/script.js"></script>
    </body>
 </html>
