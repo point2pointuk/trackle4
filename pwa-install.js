@@ -10,8 +10,8 @@ window.addEventListener("appinstalled", () => {
 window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault();
     deferredPrompt = event;
-    
-    // Show the button only if the PWA isn't installed
+
+    // Show the install button if the PWA isn't installed
     if (installButton) {
         installButton.style.display = "inline";
         installButton.addEventListener("click", () => {
@@ -29,7 +29,12 @@ window.addEventListener("beforeinstallprompt", (event) => {
     }
 });
 
-// Check if running as a PWA and hide the button
+// Check if running as a PWA and display prompt to open in app
 if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
-    installButton.style.display = "none";
+    installButton.style.display = "none"; // Hide the install button if running as PWA
+    // Optionally, display a message or prompt to encourage the user to open the app
+    const openAppMessage = document.createElement('p');
+    openAppMessage.textContent = "You are using Trackle in app mode! Open it in the PWA for the best experience.";
+    openAppMessage.style.color = "#9A114F";
+    document.body.appendChild(openAppMessage);
 }
