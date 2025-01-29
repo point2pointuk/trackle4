@@ -6,26 +6,31 @@ window.addEventListener('beforeinstallprompt', (event) => {
   // Save the event so it can be triggered later
   deferredPrompt = event;
 
-  // Automatically trigger the install prompt after a delay (or a specific condition)
-  setTimeout(() => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
+  // Show the custom install link
+  const installLink = document.getElementById('install-link');
+  installLink.style.display = 'inline'; // Make the link visible
 
-      // Wait for the user's response
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the A2HS prompt');
-        } else {
-          console.log('User dismissed the A2HS prompt');
-        }
-        // Reset the deferred prompt variable
-        deferredPrompt = null;
-      });
-    }
-  }, 2000); // Delay the prompt by 2 seconds (or adjust as needed)
+  installLink.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent the default link behaviour
+
+    // Show the install prompt
+    deferredPrompt.prompt();
+
+    // Wait for the user's response
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      // Reset the deferred prompt variable
+      deferredPrompt = null;
+    });
+  });
 });
 
 // Optionally, hide the install link after the PWA is installed
 window.addEventListener('appinstalled', () => {
-  console.log('PWA installed!');
+  const installLink = document.getElementById('install-link');
+  installLink.style.display = 'none';
 });
