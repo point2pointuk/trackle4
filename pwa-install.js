@@ -11,8 +11,8 @@ window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   // Save the event for later use
   deferredPrompt = event;
-  
-  // Listen for a mouse move or click to trigger the prompt
+
+  // Trigger install prompt when the mouse moves
   const triggerInstall = () => {
     if (deferredPrompt) {
       deferredPrompt.prompt(); // Show the install prompt
@@ -31,9 +31,8 @@ window.addEventListener('beforeinstallprompt', (event) => {
     }
   };
 
-  // Trigger on mouse move or click
+  // Listen for mousemove event to trigger the prompt
   window.addEventListener('mousemove', triggerInstall, { once: true });
-  window.addEventListener('click', triggerInstall, { once: true });
 });
 
 // Optionally, reset the state when the page reloads
