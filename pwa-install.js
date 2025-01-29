@@ -33,3 +33,16 @@ window.addEventListener("beforeinstallprompt", (event) => {
 if (window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone) {
     installButton.style.display = "none";
 }
+
+// Detect if the app is installed but being accessed from a browser
+if (!window.matchMedia("(display-mode: standalone)").matches && !window.navigator.standalone) {
+    // Display a message or prompt the user to open the app if installed
+    if (navigator.share) {
+        // Example: Prompt to share to open in app if installed
+        document.getElementById("installButton").style.display = "inline";
+        installButton.addEventListener("click", () => {
+            // Logic to open the app (or prompt user to add it)
+            window.location = "trackle://"; // Custom URL scheme (if applicable)
+        });
+    }
+}
