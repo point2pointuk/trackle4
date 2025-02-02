@@ -25,7 +25,7 @@
           entryTemplate:'<div class="station"><a href="{url}">{title}<div class="subline">{cat} | {date}</div></a></div>',
           tokens: {
             cat: function(entry, tokens) {
-              return entry["categories"][0]["title"];
+              return entry["title"];
             }
           },
           success: function() {
