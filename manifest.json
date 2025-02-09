@@ -109,21 +109,26 @@
     "window-controls-overlay",
     "standalone"
   ],
-  "shortcuts": [
-    {
-      "name": "Home",
-      "url": "/index.html",
-      "description": ""
-    },
-    {
-      "name": "TfL",
-      "url": "/tfl.html",
-      "description": ""
-    },
-    {
-      "name": "Blog",
-      "url": "/feed.html",
-      "description": ""
-    }
-  ]
+  "shortcuts": [{
+  "name": "Home",
+  "url": "/",
+  "icons": [{
+    "src": "/images/icons/android/icon-xxxhdpi.png",
+    "sizes": "192x192"
+  }]
+},{
+  "name": "TfL",
+  "url": "/tfl",
+  "icons": [{
+    "src": "/images/icons/android/icon-xxxhdpi.png",
+    "sizes": "192x192"
+  }]
+},{
+  "name": "Blog",
+  "url": "/",
+  "icons": [{
+    "src": "/images/icons/android/icon-xxxhdpi.png",
+    "sizes": "192x192"
+  }]
+}],
 }
