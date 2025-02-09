@@ -108,5 +108,22 @@
   "display_override": [
     "window-controls-overlay",
     "standalone"
+  ],
+  "shortcuts": [
+    {
+      "name": "Home",
+      "url": "/index.html",
+      "description": ""
+    },
+    {
+      "name": "TfL",
+      "url": "/tfl.html",
+      "description": ""
+    },
+    {
+      "name": "Blog",
+      "url": "/feed.html",
+      "description": ""
+    }
   ]
 }
