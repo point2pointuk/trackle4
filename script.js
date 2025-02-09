@@ -1,23 +1,18 @@
-// Request Notification Permission
-document.addEventListener("DOMContentLoaded", async () => {
-    if ("Notification" in window) {
-        if (Notification.permission === "default") {
-            await Notification.requestPermission();
-        }
+document.addEventListener("click", async () => {
+    if (Notification.permission === "default") {
+        await Notification.requestPermission();
+    }
+
+    if (Notification.permission === "granted") {
+        new Notification("Hello!", {
+            body: "You tapped the page!",
+            icon: "/icons/icon-192x192.png" // Optional icon
+        });
+    } else {
+        alert("Notifications are blocked!");
     }
 });
 
-// Send Notification when user taps anywhere on the page
-document.addEventListener("click", () => {
-    if (Notification.permission === "granted") {
-        new Notification("Hello", {
-            body: "You tapped the page!",
-            icon: "/icons/icon-192x192.png" // Optional: Change to your app's icon
-        });
-    } else {
-        console.warn("Notifications are not allowed.");
-    }
-});
 
 // Share Button
 const shareButton = document.getElementById("shareButton");
