@@ -130,27 +130,5 @@
     "src": "/images/icons/android/icon-xxxhdpi.png",
     "sizes": "192x192"
   }]
-}],
-  "shortcuts": [{
-  "name": "Home",
-  "url": "/",
-  "icons": [{
-    "src": "/images/icons/android/icon-xxxhdpi.png",
-    "sizes": "192x192"
-  }]
-},{
-  "name": "TfL",
-  "url": "/tfl",
-  "icons": [{
-    "src": "/images/icons/android/icon-xxxhdpi.png",
-    "sizes": "192x192"
-  }]
-},{
-  "name": "Blog",
-  "url": "/",
-  "icons": [{
-    "src": "/images/icons/android/icon-xxxhdpi.png",
-    "sizes": "192x192"
-  }]
 }]
 }
