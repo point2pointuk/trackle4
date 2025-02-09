@@ -1,29 +1,112 @@
 {
-    "name": "Trackle",
-    "short_name": "Trackle",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff",
-    "description": "What is Trackle™? Trackle™ is a game, in which players attempt to guess all the stations in: the London Underground; the DLR, Cable Car and Elizabeth Line; the London Overground; or the London Trams.",
-    "icons": [
-        { "src": "/images/icons/ios/AppIcon@2x.png", "type": "image/png", "sizes": "60x60" },
-        { "src": "/images/icons/ios/AppIcon@3x.png", "type": "image/png", "sizes": "60x60" },
-        { "src": "/images/icons/ios/AppIcon~ipad.png", "type": "image/png", "sizes": "76x76" },
-        { "src": "/images/icons/ios/AppIcon@2x~ipad.png", "type": "image/png", "sizes": "76x76" },
-        { "src": "/images/icons/ios/AppIcon-83.5@2x~ipad.png", "type": "image/png", "sizes": "83.5x83.5" },
-        { "src": "/images/icons/ios/AppIcon-40@2x.png", "type": "image/png", "sizes": "40x40" },
-        { "src": "/images/icons/ios/AppIcon-40@3x.png", "type": "image/png", "sizes": "40x40" },
-        { "src": "/images/icons/web/favicon.ico", "type": "image/x-icon", "sizes": "16x16 32x32" },
-        { "src": "/images/icons/web/icon-192.png", "type": "image/png", "sizes": "192x192" },
-        { "src": "/images/icons/web/icon-512.png", "type": "image/png", "sizes": "512x512" },
-        { "src": "/images/icons/web/icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
-        { "src": "/images/icons/web/icon-512-maskable.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" },
-        { "src": "/images/icons/android/icon-mdpi.png", "type": "image/png", "sizes": "48x48" },
-        { "src": "/images/icons/android/icon-hdpi.png", "type": "image/png", "sizes": "72x72" },
-        { "src": "/images/icons/android/icon-xhdpi.png", "type": "image/png", "sizes": "96x96" },
-        { "src": "/images/icons/android/icon-xxhdpi.png", "type": "image/png", "sizes": "144x144" },
-        { "src": "/images/icons/android/icon-xxxhdpi.png", "type": "image/png", "sizes": "192x192" },
-        { "src": "/images/icons/web/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" }
-    ]
+  "name": "Trackle",
+  "short_name": "Trackle",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Welcome to Trackle! Trackle is an online game where you guess railway stations within a specific UK railway line or transport network. Each station you enter appears on a map, helping you track your progress. Your goal is to name every station on the chosen line or network to complete the game. How far do you think you'll get?",
+  "icons": [
+    {
+      "src": "/images/icons/ios/AppIcon@2x.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon@3x.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon~ipad.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon@2x~ipad.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon-83.5@2x~ipad.png",
+      "type": "image/png",
+      "sizes": "83.5x83.5"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon-40@2x.png",
+      "type": "image/png",
+      "sizes": "40x40"
+    },
+    {
+      "src": "/images/icons/ios/AppIcon-40@3x.png",
+      "type": "image/png",
+      "sizes": "40x40"
+    },
+    {
+      "src": "/images/icons/web/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16 32x32"
+    },
+    {
+      "src": "/images/icons/web/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons/web/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/icons/web/icon-192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icons/web/icon-512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/images/icons/android/icon-mdpi.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/images/icons/android/icon-hdpi.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/images/icons/android/icon-xhdpi.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/images/icons/android/icon-xxhdpi.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/images/icons/android/icon-xxxhdpi.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons/web/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "id": "com.sbdesigns.trackle",
+  "orientation": "portrait",
+  "categories": [
+    "games"
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ]
 }
