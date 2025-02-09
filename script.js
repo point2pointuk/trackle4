@@ -1,28 +1,23 @@
-// Badge Logic (set to 3 seconds for testing)
-async function updateBadge() {
-    if (!navigator.setAppBadge) return; // Check if API is supported
-
-    let lastOpened = localStorage.getItem("lastOpened");
-    if (!lastOpened) return; // If no record, exit
-
-    let secondsSinceLastOpened = (Date.now() - lastOpened) / 1000;
-
-    if (secondsSinceLastOpened > 3) { // Set to 3 seconds for testing
-        navigator.setAppBadge(0); // Set a blank badge
-    } else {
-        navigator.clearAppBadge(); // Clear badge
+// Request Notification Permission
+document.addEventListener("DOMContentLoaded", async () => {
+    if ("Notification" in window) {
+        if (Notification.permission === "default") {
+            await Notification.requestPermission();
+        }
     }
-}
-
-// Save the last opened time when app loads
-window.addEventListener("load", () => {
-    localStorage.setItem("lastOpened", Date.now());
-    if (navigator.clearAppBadge) navigator.clearAppBadge();
-    updateBadge(); // Check and update badge on load
 });
 
-// Re-check badge every second for testing
-setInterval(updateBadge, 1000);
+// Send Notification when user taps anywhere on the page
+document.addEventListener("click", () => {
+    if (Notification.permission === "granted") {
+        new Notification("Hello", {
+            body: "You tapped the page!",
+            icon: "/icons/icon-192x192.png" // Optional: Change to your app's icon
+        });
+    } else {
+        console.warn("Notifications are not allowed.");
+    }
+});
 
 // Share Button
 const shareButton = document.getElementById("shareButton");
