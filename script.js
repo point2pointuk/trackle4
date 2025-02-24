@@ -8,7 +8,7 @@ shareButton.addEventListener("click", async () => {
         try {
             await navigator.share({
                 title: "Trackle",
-                text: "Play Trackle by SB Designs today and attempt to guess all of the stations on TfL and National Rail! Play now and have fun at https://trackle.pages.dev!",
+                text: "Play Trackle by SB Designs today and attempt to guess all of the stations on TfL! Play now at https://trackle.pages.dev!",
             });
             console.log("Trackle shared successfully!");
         } catch (error) {
