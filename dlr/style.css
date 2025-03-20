@@ -1,5 +1,5 @@
 :root {
-  --color-bg: rgb(0, 164, 167);
+  --color-bg: rgb(96, 57, 158);
   --color-text-main: #000000;
   --color-primary: #ffff00;
   --wrapper-height: 87vh;
@@ -12,7 +12,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #007D80;
+    --color-bg: #4a2775;
     --color-primary: #2A8201;
     --color-overlay: #333333;
     --color-text-main: #ffffff;
