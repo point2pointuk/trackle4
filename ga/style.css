@@ -1,0 +1,120 @@
+:root {
+  --color-bg: rgb(215, 4, 40);
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 87vh;
+  --color-overlay: #ffffff;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "DM Sans", sans-serif; /* Updated font family */
+  --font-family-header: "DM Sans", sans-serif; /* Updated font family */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #630313;
+    --color-primary: #2A8201;
+    --color-overlay: #333333;
+    --color-text-main: #ffffff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-family: var(--font-family-header);
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#mapContainer {
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg);
+  opacity: 0.85; /* Translucent effect */
+  color: white;
+  padding: 0.5rem 1rem;
+  position: sticky; /* Makes the element sticky */
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+
+button {
+  background-color: var(--color-bg);
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: var(--font-family); /* Ensure button uses DM Sans */
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+  border: none;
+}
+
+#scoreContainer {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-family); /* Ensure score container uses DM Sans */
+}
+
+.formContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-overlay);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  position: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+input {
+  text-transform: uppercase;
+  flex: 1;
+  border: 2px solid var(--color-bg);
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: var(--font-family); /* Ensure input uses DM Sans */
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 16px 0px;
+}
+
+input::placeholder {
+  color: rgb(123, 134, 140);
+}
