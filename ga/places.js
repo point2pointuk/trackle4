@@ -7,6 +7,7 @@ const sourcePlaces = [
   {"name": "Attleborough", "pt": [52.5145682909, 1.0223710881]},
   {"name": "Audley End", "pt": [52.0044503988, 0.2071861287]},
   {"name": "Battlesbridge", "pt": [51.6248280358, 0.5653129218]},
+  {"name": "Beaulieu Park", "pt": [51.75731763904826, 0.5188585960189394]},
   {"name": "Beccles", "pt": [52.4585445204, 1.5695203477]},
   {"name": "Berney Arms", "pt": [52.5898102913, 1.6303988741]},
   {"name": "Billericay", "pt": [51.6288849556, 0.4186576571]},
