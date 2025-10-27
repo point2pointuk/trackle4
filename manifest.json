@@ -4,7 +4,7 @@
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#dddddd",
   "description": "Welcome to Trackle! Trackle is an online game where you guess railway stations within a specific UK railway line or transport network. Each station you enter appears on a map, helping you track your progress. Your goal is to name every station on the chosen line or network to complete the game. How far do you think you'll get?",
   "icons": [
     {
