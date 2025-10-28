@@ -97,6 +97,11 @@
       "src": "/images/icons/web/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180"
+    },
+    { "src": "/images/icons/android/themed.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "monochrome",
     }
   ],
   "id": "com.sbdesigns.trackle",
