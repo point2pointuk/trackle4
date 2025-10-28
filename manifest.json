@@ -3,11 +3,8 @@
   "short_name": "Trackle",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#dddddd",
   "theme_color": "#dddddd",
   "description": "A game about trains by Point 2 Point.",
-  "author": "Point 2 Point",
-  "version_name": "4.1.2"
   "icons": [
     {
       "src": "/images/icons/ios/AppIcon@2x.png",
