@@ -101,7 +101,7 @@
     { "src": "/images/icons/android/themed.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "monochrome"
+      "purpose": "any-maskable"
     }
   ],
   "id": "com.sbdesigns.trackle",
