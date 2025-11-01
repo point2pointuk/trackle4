@@ -5,10 +5,6 @@
   "display": "standalone",
   "theme_color": "#dddddd",
   "description": "A game about trains by Point 2 Point.",
-  "developer": {
-    "name": "Point 2 Point",
-    "url": "https://point2point.is-a.dev"
-  }
   "icons": [
     {
       "src": "/images/icons/ios/AppIcon@2x.png",
