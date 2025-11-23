@@ -1,6 +1,10 @@
+/* Remove snow fx after xmas */
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <link rel="stylesheet" href="/xmas/snow.css"> 
+      
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta property="og:title" content="Play Trackle" />
@@ -25,7 +29,7 @@
          z-index: 0;
          opacity: 0;
          animation: fadeIn 2s forwards;
-         animation-delay: 0.3s; /* Delay for line */
+         animation-delay: 0.3s; 
          }
          .station a:hover {
          text-decoration: underline;
@@ -62,6 +66,7 @@
       </style>
    </head>
    <body>
+      <canvas id="snow-canvas" aria-hidden="true"></canvas>
       <div class="stations-container">
          <div class="line"></div>
          <div class="station">
@@ -100,6 +105,7 @@
 </script>
 <script src="/script.js"></script>
 <script src="pwa-install.js"></script>
+<script src="/snow.js"></script>
 
    </body>
 </html>
